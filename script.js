@@ -2,11 +2,33 @@ let dados = [];
 let categoriaAtual = 'Todas';
 let buscaAtual = '';
 
+// Tema Claro/Escuro
+const themeBtn = document.getElementById('toggle-theme');
+const body = document.body;
+
+// Verifica se o usuário já escolheu um tema antes
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light-theme');
+  themeBtn.textContent = '☀️';
+}
+
+themeBtn.addEventListener('click', () => {
+  body.classList.toggle('light-theme');
+  const isLight = body.classList.contains('light-theme');
+  themeBtn.textContent = isLight ? '☀️' : '🌙';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 async function carregar() {
-  const res = await fetch('dados.json');
-  dados = await res.json();
-  montarCategorias();
-  renderizar();
+  try {
+    const res = await fetch('dados.json');
+    dados = await res.json();
+    montarCategorias();
+    renderizar();
+  } catch (error) {
+    console.error("Erro ao carregar dados.json:", error);
+    document.getElementById('grid').innerHTML = '<p style="grid-column:1/-1;text-align:center;opacity:0.6">Erro ao carregar os materiais. Verifique o arquivo dados.json.</p>';
+  }
 }
 
 function montarCategorias() {
@@ -24,7 +46,7 @@ function filtrar(cat) {
 }
 
 function icone(tipo) {
-  return { pdf: '📄', pasta: '📁', video: '🎥', imagem: '🖼️', doc: '📝', artigo: '📰' }[tipo] || '📦';
+  return { pdf: '📄', pasta: '📁', video: '🎥', imagem: '🖼️', doc: '📝', artigo: '📰', audio: '🎵' }[tipo] || '📦';
 }
 
 function renderizar() {
@@ -35,7 +57,7 @@ function renderizar() {
   );
 
   document.getElementById('grid').innerHTML = filtrados.map(d => `
-    <a href="${d.link}" target="_blank" class="card" style="text-decoration:none;color:inherit">
+    <a href="${d.link}" target="_blank" class="card">
       <div class="icone">${icone(d.tipo)}</div>
       <div class="info">
         <h3>${d.titulo}</h3>
