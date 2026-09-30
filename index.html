@@ -2,15 +2,27 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Acervo Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Acervo Digital | Libras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="bg-animation"></div>
+  
   <header>
-    <h1>📚 Meu Acervo</h1>
-    <p>Todos os meus materiais em um só lugar</p>
-    <input type="text" id="busca" placeholder="🔍 Buscar material...">
-    <div id="categorias"></div>
+    <div class="header-content">
+      <h1> Meu Acervo</h1>
+      <p>Materiais sobre Libras e Cultura Surda</p>
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="busca" placeholder="Buscar material...">
+      </div>
+      <div id="categorias"></div>
+    </div>
+    <button id="toggle-theme" class="theme-btn" title="Alternar tema">🌙</button>
   </header>
 
   <main id="grid"></main>
