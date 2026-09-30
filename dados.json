@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Apostilas",
+    "categoria": "Materiais",
+    "tipo": "pasta",
+    "link": "https://drive.google.com/drive/folders/13A3e3QgzROHRIUj3OOEK7Vhj5Ju3cdr2?usp=sharing"
+  },
+  {
+    "titulo": "Dicionários e Glossário",
+    "categoria": "Materiais",
+    "tipo": "pasta",
+    "link": "https://drive.google.com/drive/folders/1aUpHiZY8LPzPyNQtaV8IXxCk8V3IlnpK?usp=sharing"
+  },
+  {
+    "titulo": "Documentos",
+    "categoria": "Materiais",
+    "tipo": "pasta",
+    "link": "https://drive.google.com/drive/folders/18CwcMQHI277hkWMI93h0KnLQusIIFfj7?usp=sharing"
+  },
+  {
+    "titulo": "Legislação",
+    "categoria": "Materiais",
+    "tipo": "pasta",
+    "link": "https://drive.google.com/drive/folders/1l2Oxv3DyjpQ2fQRji1V2SXqo9J8meeDs?usp=sharing"
+  },
+  {
+    "titulo": "Existem gírias em libras? (Superinteressante)",
+    "categoria": "Cultura Surda",
+    "tipo": "artigo",
+    "link": "https://super.abril.com.br/cultura/existem-girias-na-lingua-de-sinais-dos-surdos/"
+  }
+]
