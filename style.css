@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+}
+
+header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+header p { opacity: 0.9; margin-bottom: 20px; }
+
+#busca {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+#categorias {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#categorias button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#categorias button:hover, #categorias button.ativo {
+  background: white;
+  color: #1e3a8a;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #334155;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.4);
+  border-color: #6d28d9;
+}
+
+.card .icone {
+  font-size: 3rem;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+}
+
+.card .info { padding: 16px; }
+.card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.card span { font-size: 0.85rem; opacity: 0.7; }
